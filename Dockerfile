@@ -8,4 +8,6 @@ FROM openjdk:17-alpine
 WORKDIR /app
 COPY --from=build /app/target/Book-API-1.0.2.jar /app/target/Book-API-1.0.2.jar
 EXPOSE 4567
+EXPOSE 8080
+EXPOSE 5701
 CMD ["java", "-jar", "target/Book-API-1.0.2.jar"]
